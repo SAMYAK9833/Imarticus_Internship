@@ -1,116 +1,79 @@
 
-# MovieBooking - SQL Database Project
+# Employee Database Project
 
+This project analyzes employee data to predict whether an employee will Leave or Not Leave the company (binary classification problem).
 
-A complete **MySQL database schema** and **sample data** for a Movie Ticket Booking System. 
+It is a complete Exploratory Data Analysis (EDA) notebook built in Google Colab using Python, Pandas, Seaborn, and Matplotlib. 
 
-This project demonstrates relational database design, foreign keys, joins, aggregations, and real-world queries.
+The dataset contains 1000 employee records with various demographic, professional, and behavioral features.
 
-Built as a mini-project for learning SQL (joins, grouping, subqueries, etc.).
+## Dataset :-
 
----
+- File :- Employee_1000.csv
+- Rows :- 1,000
+- Columns :- 9
 
-##  Project Screenshot 
+## Features :-
 
-[MovieBooking Database Screenshot]
+| Column                       | Description                                      | Type            |
+|------------------------------|--------------------------------------------------|-----------------|
+| Education                    | Education level (Bachelors, Masters, PhD)       | Categorical     |
+| JoiningYear                  | Year the employee joined                        | Integer         |
+| City                         | City of posting (Bangalore, Pune, New Delhi)    | Categorical     |
+| PaymentTier                  | Salary tier (1, 2, 3)                           | Integer         |
+| Age                          | Age of employee                                 | Integer         |
+| Gender                       | Male / Female                                   | Categorical     |
+| EverBenched                  | Whether employee was ever benched (No/Yes)      | Categorical     |
+| ExperienceInCurrentDomain    | Years of experience in current domain           | Integer         |
+| LeaveOrNot                   | Target Variable (0 = Stay, 1 = Leave)           | Integer (Binary)|
 
-### Snap 1 :-
+## Technologies Used :-
 
- <img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/7bda44f0-af34-4e0f-9adb-d19480f3efd7" />
+- Python 3
+- Pandas
+- Seaborn & Matplotlib (for future visualizations)
+- Google Colab
 
-### Snap 2 :-
+## Screenshots :-
 
-<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/8c153ef7-325a-45e1-a612-afaded4fa4fa" />
+### Snap 1 :- 
+
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/70051dba-a3f2-4958-955e-fce728c70d45" />
+
+### Snap 2 :- 
+
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/cfbf61d1-0354-45fa-9915-9f7053f2fe56" />
 
 ### Snap 3 :- 
 
-<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/74d30d45-e674-4e4b-be96-12b665c60c0c" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/3b0f27c0-ffb5-4689-9179-40c9d6ad7d46" />
+
+## How to Run
+
+1. Clone this repository :- 
+
+``` Bash 
+git clone https://github.com/SAMYAK9833/Imarticus_Internship.git
+```
+2. Open the notebook in Google Colab :-
 
 
----
+- Upload Employee_1000.csv to Colab
+- Run all cells
 
-##  Database Schema
+## Future Scope :-
 
-### Tables Created :-
-- **Movies** — movie details (name, genre, duration)
+- Data Visualization (Countplots, Heatmap, Boxplots)
 
-- **Theaters** — theater information (name, location)
+- Feature Engineering
 
-- **Shows** — movie screenings with time, price & venue
+- Model Building (Logistic Regression, Random Forest, XGBoost, etc.)
 
-- **Customers** — customer records
+- Model Evaluation (Accuracy, Precision, Recall, ROC-AUC)
 
-- **Bookings** — booking transactions with seats & date
+- Hyperparameter Tuning
 
-
-All tables use proper **PRIMARY KEY**, **AUTO_INCREMENT**, and **FOREIGN KEY** constraints.
-
----
-
-##  Sample Data Inserted
-
-- 3 Movies :- *Dhurandhar*, *Partner*, *Badla*
-
-- 3 Theaters :- PVR Thane, INOX Mumbai, Cinepolis Navi Mumbai
-
-- 3 Shows (Jan 2025)
-
-- 3 Customers :- Pawan, Samyak, Aman
-
-- 3 Bookings
-
-
----
-
-## 10 Real-World SQL Queries Included
-
-All queries are tested and ready to run :-
-
-1. **Show all booked tickets** with customer & movie name 
-
-2. **Total revenue** from each movie  
-
-3. **Most watched movie** (by total tickets sold)  
-
-4. **Theater-wise earnings**  
-
-5. Customers who booked **more than 2 seats**  
-
-6. **List all available shows** with details  
-
-7. Total bookings & seats booked by **each customer** 
-
-8. **Average ticket price** across all sold tickets  
-
-9. Customers who booked on **15th January 2025**  
-
-10. **Total amount spent** by each customer
-
-*(All queries are present in the repository as `queries.sql`)*
-
----
-
-##  How to Run / Setup
-
-### Using MySQL Command Line / Workbench
-
-
-- Run the entire setup file 
-
-  source moviebooking_setup.sql;
-
-- Run individual queries
-
-  source queries.sql;
-
-## What You Will Learn
-
-- Designing normalized relational databases
-- Using FOREIGN KEY constraints
-- INNER JOIN, LEFT JOIN
-- GROUP BY + HAVING + aggregate functions (SUM, AVG, COUNT)
-- Filtering with WHERE and DATE
-- Real-world business queries for a booking system
+- Deployment (Streamlit / Flask)
 
 ## Author
 
